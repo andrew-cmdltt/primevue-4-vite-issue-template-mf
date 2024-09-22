@@ -8,9 +8,11 @@ export default defineConfig({
   plugins: [
     vue(),
     federation({
-      name: 'host-app',
-      remotes: {
-        remote_app: ""
+      name: 'remote-app',
+      filename: 'remoteEntry.js',
+      // Modules to expose
+      exposes: {
+        './app': './src/ServiceBootloader.js',
       },
       shared: ['vue'],
     }),
