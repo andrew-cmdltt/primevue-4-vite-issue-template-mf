@@ -1,5 +1,5 @@
 <template>
-  <p class="py-4">
+  <p class="py-4" style="color: red;">
     This is host app
   </p>
   <div ref="remote_app"></div>

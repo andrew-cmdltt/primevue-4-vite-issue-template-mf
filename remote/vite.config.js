@@ -10,7 +10,6 @@ export default defineConfig({
     federation({
       name: 'remote-app',
       filename: 'remoteEntry.js',
-      // Modules to expose
       exposes: {
         './app': './src/ServiceBootloader.js',
       },
