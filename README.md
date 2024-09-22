@@ -1,3 +1,4 @@
-# primevue-4-vite-issue-template-mf
+# Primevue Module Federation demo application
 
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/andrew-cmdltt/primevue-4-vite-issue-template-mf)
+## Structure
+

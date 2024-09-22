@@ -1,5 +1,20 @@
-# primevue-4-vite-issue-template
+# Primevue Module Federation demo application
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+## Structure
+The project has two separate parts:
+- `host` application. This application includes a link to` remoteEntry.js` to plug in `remote` application.
+- `remote` application. This part of the project includes vite special vite configurations to generate a necessary file to share this application with another project that uses Module Federation.
+### Instructions for the local deployment
+Enter the follow command to build and preview `remote` application.
+```sh
+cd ./remote
+npm run preview
+```
+This command will generate a production build, and the application will be available by the following link http://localhost:4173/.
+Then enter the follow command to start the `host` application as a development server.
+```sh
+cd ./host
+npm run dev
+```
+Application will be available on the http://localhost:5173/. You'll see both `host` and `remote` applications by this link.
+In the files `vite.config.js` of both applications's directories, you can learn Module Federation configurations and change them to get a necessary result.
