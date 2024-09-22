@@ -128,7 +128,6 @@ import VirtualScroller from 'primevue/virtualscroller';
 let app;
 
 export const mount = (el) => {
-  console.log(App);
   app = createApp(App);
 
   app.use(PrimeVue, {
